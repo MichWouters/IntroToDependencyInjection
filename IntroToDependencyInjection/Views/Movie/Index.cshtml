@@ -1,0 +1,24 @@
+﻿@model MovieIndexViewModel
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release</th>
+            <th>Director</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Movie item in Model.Movies)
+        {
+
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.ReleaseData.ToShortDateString()</td>
+                <td>@item.Director</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
